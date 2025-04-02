@@ -23,7 +23,7 @@ return {
     },
   },
   { "echasnovski/mini.hipatterns", opts = {} },
-  { "echasnovski/mini.splitjoin", opts = {} },
+  -- { "echasnovski/mini.splitjoin", opts = {} },
   { "echasnovski/mini.move", opts = {} },
   { "echasnovski/mini.pairs", opts = {} },
   { "echasnovski/mini.statusline", opts = {} },

@@ -47,13 +47,6 @@ return {
       desc = "[F]ind [R]ecent",
     },
     {
-      "<leader>q",
-      function()
-        require("fzf-lua").quickfix()
-      end,
-      desc = "[Q]uickfix",
-    },
-    {
       "<leader>bl",
       function()
         require("fzf-lua").buffers()

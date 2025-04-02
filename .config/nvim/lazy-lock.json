@@ -22,7 +22,6 @@
   "mini.jump": { "branch": "main", "commit": "65bf2c55680d8be63d29ce0c5ee4e33031426115" },
   "mini.move": { "branch": "main", "commit": "4fe4a855fee53c66b0f3255a4b54ddc2ae6b308c" },
   "mini.pairs": { "branch": "main", "commit": "69864a2efb36c030877421634487fd90db1e4298" },
-  "mini.splitjoin": { "branch": "main", "commit": "70240d5d3881ff1b2b1d7902450f98a6fa303800" },
   "mini.statusline": { "branch": "main", "commit": "6a22a137926c60f987ab76433c56230ffdd7c42d" },
   "mini.surround": { "branch": "main", "commit": "5aab42fcdcf31fa010f012771eda5631c077840a" },
   "mini.tabline": { "branch": "main", "commit": "fc00d47c6f00eeef8ee05694e59021afb4ae0e0e" },
@@ -36,10 +35,15 @@
   "nvim-treesitter": { "branch": "master", "commit": "30654ee72a69e7c76a54b66d748dae088429e863" },
   "nvim-web-devicons": { "branch": "master", "commit": "4c3a5848ee0b09ecdea73adcd2a689190aeb728c" },
   "oil.nvim": { "branch": "master", "commit": "302bbaceeafc690e6419e0c8296e804d60cb9446" },
+  "persistence.nvim": { "branch": "main", "commit": "166a79a55bfa7a4db3e26fc031b4d92af71d0b51" },
   "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
+  "scratch.nvim": { "branch": "main", "commit": "6230634669d29bf05ab4e85b3c7df8fd8402dcb4" },
   "tokyonight.nvim": { "branch": "main", "commit": "057ef5d260c1931f1dffd0f052c685dcd14100a3" },
+  "treesj": { "branch": "main", "commit": "f4049f8ba2177e7c5c03fb9e34d4e039c685d744" },
   "trouble.nvim": { "branch": "main", "commit": "85bedb7eb7fa331a2ccbecb9202d8abba64d37b3" },
+  "twoslash-queries.nvim": { "branch": "main", "commit": "b92622c7b71eceefabd02eef24236041069904b1" },
   "typescript-tools.nvim": { "branch": "master", "commit": "e0887c1e336edbb01243e9f1e60d74b0bc0a2bed" },
+  "vim-tmux-navigator": { "branch": "master", "commit": "791dacfcfc8ccb7f6eb1c853050883b03e5a22fe" },
   "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" },
   "yanky.nvim": { "branch": "main", "commit": "98b9c21d3c06d79f68fd9d471dcc28fc6d2d72ef" }
 }
