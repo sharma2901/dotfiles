@@ -1,8 +1,28 @@
 return {
   "ibhagwan/fzf-lua",
   dependencies = { "nvim-tree/nvim-web-devicons" },
-  opts = {},
+  opts = {
+    oldfiles = { include_current_session = true },
+    previwers = {
+      builtin = {
+        syntax_limit_b = 1024 * 100, --100KB
+      },
+    },
+  },
   keys = {
+    {
+      "<leader>,",
+      "<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>",
+      desc = "Switch Buffer",
+    },
+    {
+      "<leader>/",
+      function()
+        require("fzf-lua").live_grep()
+      end,
+      desc = "Grep",
+    },
+    { "<leader>:", "<cmd>FzfLua command_history<cr>", desc = "Command History" },
     {
       "<leader>ff",
       function()
@@ -11,7 +31,7 @@ return {
       desc = "[F]ind [F]iles",
     },
     {
-      "<leader><leader>",
+      "<leader><space>",
       function()
         require("fzf-lua").files()
       end,
@@ -23,14 +43,6 @@ return {
         require("fzf-lua").files({ resume = true })
       end,
       desc = "Resume [F]ind",
-    },
-    {
-      "<leader>sg",
-      function()
-        require("fzf-lua").grep_visual()
-      end,
-      mode = { "x" },
-      desc = "[S]earch [G]rep",
     },
     {
       "<leader>fc",
@@ -46,75 +58,43 @@ return {
       end,
       desc = "[F]ind [R]ecent",
     },
+    { "<leader>fb", "<cmd>FzfLua buffers sort_mru=true sort_lastused=true<cr>", desc = "Buffers" },
+    { "<leader>fg", "<cmd>FzfLua git_files<cr>", desc = "Find Files (git-files)" },
+    -- git
+    { "<leader>gc", "<cmd>FzfLua git_commits<CR>", desc = "Commits" },
+    { "<leader>gs", "<cmd>FzfLua git_status<CR>", desc = "Status" },
+    -- search
+    { '<leader>s"', "<cmd>FzfLua registers<cr>", desc = "Registers" },
+    { "<leader>sa", "<cmd>FzfLua autocmds<cr>", desc = "Auto Commands" },
+    { "<leader>sb", "<cmd>FzfLua grep_curbuf<cr>", desc = "Buffer" },
+    { "<leader>sd", "<cmd>FzfLua diagnostics_document<cr>", desc = "Document Diagnostics" },
+    { "<leader>sD", "<cmd>FzfLua diagnostics_workspace<cr>", desc = "Workspace Diagnostics" },
+    { "<leader>sh", "<cmd>FzfLua help_tags<cr>", desc = "Help Pages" },
+    { "<leader>sH", "<cmd>FzfLua highlights<cr>", desc = "Search Highlight Groups" },
+    { "<leader>sj", "<cmd>FzfLua jumps<cr>", desc = "Jumplist" },
+    { "<leader>sk", "<cmd>FzfLua keymaps<cr>", desc = "Key Maps" },
+    { "<leader>sl", "<cmd>FzfLua loclist<cr>", desc = "Location List" },
+    { "<leader>sM", "<cmd>FzfLua man_pages<cr>", desc = "Man Pages" },
+    { "<leader>sm", "<cmd>FzfLua marks<cr>", desc = "Jump to Mark" },
+    { "<leader>sR", "<cmd>FzfLua resume<cr>", desc = "Resume" },
+    { "<leader>sq", "<cmd>FzfLua quickfix<cr>", desc = "Quickfix List" },
     {
-      "<leader>bl",
+      "<leader>ss",
       function()
-        require("fzf-lua").buffers()
+        require("fzf-lua").lsp_document_symbols({
+          regex_filter = symbols_filter,
+        })
       end,
-      desc = "[L]ist [B]uffer",
+      desc = "Goto Symbol",
     },
     {
-      "<leader>sg",
+      "<leader>sS",
       function()
-        require("fzf-lua").live_grep()
+        require("fzf-lua").lsp_live_workspace_symbols({
+          regex_filter = symbols_filter,
+        })
       end,
-      desc = "[S]earch [G]rep",
-    },
-    {
-      "<leader>sw",
-      function()
-        require("fzf-lua").grep_cword()
-      end,
-      desc = "[S]earch [W]ord under the cursor",
-    },
-    {
-      "<leader>sW",
-      function()
-        require("fzf-lua").grep_cWORD()
-      end,
-      desc = "[S]earch [W]ORD under the cursor",
-    },
-    {
-      "<leader>fp",
-      function()
-        require("fzf-lua").grep_project()
-      end,
-      desc = "[F]ind in [P]roject",
-    },
-    {
-      "<leader>sb",
-      function()
-        require("fzf-lua").lgrep_curbuf()
-      end,
-      desc = "[S]earch in current [B]uffer",
-    },
-    {
-      "<leader>sB",
-      function()
-        require("fzf-lua").builtin()
-      end,
-      desc = "[S]earch [B]uiltin",
-    },
-    {
-      "<leader>fh",
-      function()
-        require("fzf-lua").helptags()
-      end,
-      desc = "[F]ind [H]elp",
-    },
-    {
-      "<leader>fm",
-      function()
-        require("fzf-lua").marks()
-      end,
-      desc = "[F]ind [M]arks",
-    },
-    {
-      "<leader>fk",
-      function()
-        require("fzf-lua").keymaps()
-      end,
-      desc = "[F]ind [K]eymaps",
+      desc = "Goto Symbol (Workspace)",
     },
   },
 }

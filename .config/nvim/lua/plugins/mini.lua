@@ -1,6 +1,6 @@
 return {
   { "echasnovski/mini.align", opts = {} },
-  { "echasnovski/mini.tabline", opts = {} },
+  -- { "echasnovski/mini.tabline", opts = {} },
   { "echasnovski/mini.ai", opts = {} },
   { "echasnovski/mini.jump", opts = {} },
   {
