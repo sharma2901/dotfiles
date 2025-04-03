@@ -123,6 +123,7 @@ return {
       pyright = {},
       rust_analyzer = {},
       svelte = {},
+      tailwindcss = {},
       ts_ls = {},
       vuels = {},
     }
