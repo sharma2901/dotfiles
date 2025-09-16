@@ -116,6 +116,7 @@ alias git="hub"
 alias python="python3"
 alias pip="pip3"
 alias lg="lazygit"
+alias pn="pnpm"
  
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
