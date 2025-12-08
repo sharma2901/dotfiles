@@ -108,9 +108,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias vim="nvim"
 alias vi="nvim"
-#alias cd="z"
-#alias zz="z -"
-#alias cdi="zi"
+alias cd="z"
+alias zz="z -"
+alias cdi="zi"
 alias f="fvm flutter"
 alias git="hub"
 alias python="python3"
@@ -143,9 +143,14 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$ANDROID_HOME/emulator:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 
-PATH=~/.console-ninja/.bin:$PATH
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 eval "$(zoxide init zsh)"
 alias config='/usr/bin/git --git-dir=/Users/suryakantsharma/.cfg/ --work-tree=/Users/suryakantsharma'
+
+. "$HOME/.local/bin/env"
+
+# Added by Antigravity
+export PATH="/Users/suryakantsharma/.antigravity/antigravity/bin:$PATH"

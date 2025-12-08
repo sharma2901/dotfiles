@@ -117,7 +117,6 @@ alt-b = 'workspace B'
 alt-c = 'workspace C'
 alt-d = 'workspace D'
 alt-e = 'workspace E'
-alt-f = 'workspace F'
 alt-g = 'workspace G'
 alt-i = 'workspace I'
 alt-m = 'workspace M'
@@ -162,6 +161,13 @@ alt-shift-p = 'move-node-to-workspace P'
 alt-shift-q = 'move-node-to-workspace Q'
 alt-shift-r = 'move-node-to-workspace R'
 alt-shift-s = 'move-node-to-workspace S'
+alt-shift-t = 'move-node-to-workspace T'
+alt-shift-u = 'move-node-to-workspace U'
+alt-shift-v = 'move-node-to-workspace V'
+alt-shift-w = 'move-node-to-workspace W'
+alt-shift-x = 'move-node-to-workspace X'
+alt-shift-y = 'move-node-to-workspace Y'
+alt-shift-z = 'move-node-to-workspace Z'
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
@@ -189,10 +195,6 @@ if.app-id = 'com.github.wez.wezterm'
 run = "move-node-to-workspace T"
 
 [[on-window-detected]]
-if.app-id = 'com.todesktop.230313mzl4w4u92'
-run = "move-node-to-workspace 1"
-
-[[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
 run = "move-node-to-workspace C"
 
@@ -204,7 +206,13 @@ run = "move-node-to-workspace N"
 if.app-id = 'app.zen-browser.zen'
 run = "move-node-to-workspace B"
 
+[[on-window-detected]]
+if.app-id = 'org.pgAdmin.pgAdmin4'
+run = "move-node-to-workspace D"
 
+[[on-window-detected]]
+if.app-id = 'com.google.antigravity'
+run = "move-node-to-workspace 1"
 
 
 
