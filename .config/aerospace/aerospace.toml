@@ -196,7 +196,7 @@ run = "move-node-to-workspace T"
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
-run = "move-node-to-workspace C"
+run = "move-node-to-workspace 1"
 
 [[on-window-detected]]
 if.app-id = 'com.anytype.anytype'
@@ -215,4 +215,6 @@ if.app-id = 'com.google.antigravity'
 run = "move-node-to-workspace 1"
 
 
-
+[[on-window-detected]]
+if.app-id = 'com.google.android.studio'
+run = "move-node-to-workspace 2"
