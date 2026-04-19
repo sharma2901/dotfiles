@@ -165,3 +165,5 @@ esac
 
 # OpenClaw Completion
 source "/Users/suryakantsharma/.openclaw/completions/openclaw.zsh"
+
+alias claude-mem='bun "/Users/suryakantsharma/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs"'
