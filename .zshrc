@@ -147,7 +147,6 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-eval "$(zoxide init zsh)"
 alias config='/usr/bin/git --git-dir=/Users/suryakantsharma/.cfg/ --work-tree=/Users/suryakantsharma'
 
 . "$HOME/.local/bin/env"
@@ -156,10 +155,10 @@ alias config='/usr/bin/git --git-dir=/Users/suryakantsharma/.cfg/ --work-tree=/U
 export PATH="/Users/suryakantsharma/.antigravity/antigravity/bin:$PATH"
 
 # pnpm
-export PNPM_HOME="/Users/suryakantsharma/Library/pnpm"
+export PNPM_HOME='/Users/suryakantsharma/Library/pnpm'
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+  ":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 # pnpm end
 
@@ -167,3 +166,5 @@ esac
 source "/Users/suryakantsharma/.openclaw/completions/openclaw.zsh"
 
 alias claude-mem='bun "/Users/suryakantsharma/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs"'
+eval "$(zoxide init zsh)"
+. "$HOME/.cargo/env"

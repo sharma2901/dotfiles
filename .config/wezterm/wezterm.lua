@@ -2,8 +2,9 @@ local wezterm = require("wezterm")
 local config = {
 	font = wezterm.font_with_fallback({
 		"JetBrainsMono Nerd Font",
-		"Noto Sans Devanagari", -- Will handle Devanagari
+		{ family = "Noto Sans Devanagari", scale = 1.0 },
 		"Cascadia Code",
+		{ family = "Lohit Devanagari", scale = 1.0 },
 	}),
 	color_scheme = "Tokyo Night",
 	font_size = 18,
@@ -20,5 +21,12 @@ local config = {
 		top = 0,
 		bottom = 0,
 	},
+	-- Latin programming ligatures (these are on by default; explicit here):
+	harfbuzz_features = { "calt=1", "clig=1", "liga=1" },
+
+	-- Devanagari fonts aren't monospaced, so scale them to match cap-height:
+	use_cap_height_to_scale_fallback_fonts = true,
+	freetype_load_flags = "DEFAULT",
+	freetype_render_target = "Normal",
 }
 return config
